@@ -12,6 +12,7 @@ pals={
 }
 
 function pal(p)
+ assert(#p==96,"palette must contain 96 hex characters")
  for i=0,15 do
   poke(0x3fc0+i*3,tonumber(p:sub(i*6+1,i*6+2),16))
   poke(0x3fc1+i*3,tonumber(p:sub(i*6+3,i*6+4),16))
